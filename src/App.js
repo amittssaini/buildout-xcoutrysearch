@@ -42,27 +42,29 @@ function App() {
         />
       </div>
       <div className="App">
+        <div className="countryCard">
         {search === ""
           ? countries.map((country) => {
               return (
-                <div className="App">
-                <div className="countryCard">
+                
+                <div>
                   <img src={country.flags.png} alt={country.flag}></img>
                   <p>{country.name.common}</p>
                 </div>
-                </div>
+                
               );
             })
           : filtered.map((country) => {
               return (
-                <div className="App">
-                <div className="countryCard">
+                
+                <div >
                   <img src={country.flags.png} alt={country.flag}></img>
                   <p>{country.name.common}</p>
                 </div>
-                </div>
+                
               );
             })}
+            </div>
       </div>
     </div>
   );
